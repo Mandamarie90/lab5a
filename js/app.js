@@ -117,11 +117,23 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-
+// Define a function called multiplyArray that takes two numbers as input and returns their product
+function multiplyArray(num1, num2) {
+  return num1 * num2; // Return the product of num1 and num2
+}
+  // Calculate the product of all numbers in the array using the reduce method
+  let product = multArr.reduce(multiplyArray); // Using the same function name here
+  
+  // Create a message string as required
+  let message = 'The numbers ' + multArr.join(',') + ' have a product of ' + product + '.';
+  
+  // Return an array containing the product and the message
+  return [product, message];
 }
 
+
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+ testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
